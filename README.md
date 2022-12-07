@@ -15,6 +15,13 @@ macros/override.sql
 {%- endmacro %}
 ```
 
+packages.yml に以下を書く
+```yaml
+packages:
+  - git: "https://github.com/mashiike/dbt-inheritance"
+    revision: v0.0.0
+```
+
 その後、クラス定義（ephemeral）に該当するものを以下のように書く
 ```sql
 {{

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: eph_model_a
+    columns:
+      - name: id
+        tests:
+          - not_null
+  - name: tbl_model_b
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('tbl_model_d')
+
+  - name: tbl_model_c
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('tbl_model_e')

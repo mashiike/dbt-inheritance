@@ -1,0 +1,19 @@
+name: 'dbt_inheritance'
+version: '0.0.0'
+config-version: 2
+require-dbt-version: ">=1.0.0"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+models:
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
